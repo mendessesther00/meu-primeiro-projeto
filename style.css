@@ -1,0 +1,787 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    color: #176b55;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Acessibilidade dos links */
+
+a:focus-visible {
+    outline: 3px solid #ff9800;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   CABEÇALHO DA PÁGINA INICIAL
+======================================== */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 5%;
+    background-color: #176b55;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.logo p {
+    color: #e0f2e9;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   MENU DA PÁGINA INICIAL
+======================================== */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu .ativo {
+    color: white;
+    background-color: #0d4d3d;
+}
+
+/* ========================================
+   CABEÇALHO DA PÁGINA DE DETALHE
+======================================== */
+
+.cabecalho-principal {
+    background-color: #e0f2e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: calc(100% - 32px);
+    max-width: 1200px;
+}
+
+.cabecalho-principal h1 {
+    font-size: 2rem;
+}
+
+/* Menu da página de detalhe */
+
+.menu-navegacao {
+    margin-top: 15px;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-navegacao a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #176b55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-navegacao a:hover {
+    background-color: #c8e6d5;
+    color: #0d4d3d;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 16px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* ========================================
+   DESTAQUE DA PÁGINA INICIAL
+======================================== */
+
+.hero {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #e0f2e9;
+    border-radius: 14px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    color: #176b55;
+    font-size: 1.8rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero p {
+    max-width: 520px;
+    margin-bottom: 0;
+}
+
+/* Botões */
+
+.botao {
+    display: inline-block;
+    background-color: #176b55;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #0d4d3d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEÇÕES DA PÁGINA INICIAL
+======================================== */
+
+.conteudo {
+    margin-bottom: 32px;
+    padding: 22px 18px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
+    scroll-margin-top: 20px;
+    min-width: 0;
+}
+
+.conteudo h2 {
+    color: #176b55;
+    margin: 0 0 16px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2e7d32;
+    font-size: 1.6rem;
+}
+
+.conteudo p {
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CARDS DA PÁGINA INICIAL
+======================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    background-color: white;
+    border: 1px solid #e1e8e5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 5%);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgb(0 0 0 / 10%);
+}
+
+/* Link do card com página de detalhe */
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-link:focus-visible {
+    outline: 3px solid #176b55;
+    outline-offset: -3px;
+}
+
+/* Área do emoji */
+
+.imagem-card {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0f2e9;
+    font-size: 3rem;
+}
+
+/* Conteúdo dos cards */
+
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px;
+    flex: 1;
+}
+
+.card-conteudo h3 {
+    color: #176b55;
+    margin-bottom: 0;
+}
+
+.card-conteudo p {
+    overflow-wrap: anywhere;
+    margin-bottom: 0;
+}
+
+/* Categoria do local */
+
+.categoria {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e0f2e9;
+    color: #176b55;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Link para os detalhes */
+
+.ver-detalhes {
+    margin-top: auto;
+    padding-top: 8px;
+    color: #176b55;
+    font-weight: bold;
+}
+
+/* ========================================
+   PÁGINA DE DETALHE DO LOCAL
+======================================== */
+
+.secao-detalhe {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 8%);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.secao-detalhe h2 {
+    color: #176b55;
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 5px;
+    margin: 0 0 16px;
+}
+
+/* Imagens e legendas */
+
+figure {
+    margin: 15px 0;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-size: 0.88rem;
+    color: #666666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* ========================================
+   TABELA DE INFORMAÇÕES
+======================================== */
+
+.tabela-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabela-info caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.tabela-info th,
+.tabela-info td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.tabela-info th {
+    background-color: #176b55;
+    color: white;
+}
+
+.tabela-info tbody tr:nth-child(even) {
+    background-color: #f2f9f2;
+}
+
+/* ========================================
+   LISTA DE COMODIDADES
+======================================== */
+
+.lista-comodidades {
+    list-style-type: circle;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.lista-comodidades li {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CARDS DE EVENTOS DA PÁGINA DE DETALHE
+======================================== */
+
+.card-evento {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.card-evento h3 {
+    font-size: 1.2rem;
+    color: #176b55;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RODAPÉS
+======================================== */
+
+/* Rodapé da página inicial */
+
+.footer {
+    margin-top: auto;
+    padding: 22px 16px;
+    background-color: #176b55;
+    color: white;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Rodapé da página de detalhe */
+
+.rodape-principal {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    color: #666666;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   RESPONSIVIDADE — TELAS MAIORES
+======================================== */
+
+@media (min-width: 700px) {
+
+    /* Cabeçalho da página inicial */
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .menu {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    /* Conteúdo principal */
+
+    main {
+        padding: 30px 24px;
+    }
+
+    /* Destaque */
+
+    .hero {
+        min-height: 340px;
+        padding: 50px 30px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Seções */
+
+    .conteudo {
+        padding: 28px;
+    }
+
+    /* Cabeçalho da página de detalhe */
+
+    .cabecalho-principal {
+        padding: 25px;
+    }
+
+    .cabecalho-principal h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Seções de detalhe */
+
+    .secao-detalhe {
+        padding: 28px;
+    }
+
+    /* Eventos */
+
+    .card-evento {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   AJUSTES PARA TELAS MUITO PEQUENAS
+======================================== */
+
+@media (max-width: 360px) {
+
+    .header {
+        padding: 18px 12px;
+    }
+
+    .menu {
+        gap: 4px;
+    }
+
+    .menu a {
+        padding: 7px 8px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 16px 10px;
+    }
+
+    .hero {
+        padding: 25px 14px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo {
+        padding: 18px 12px;
+    }
+
+    .cabecalho-principal {
+        padding: 15px 10px;
+    }
+
+    .tabela-info th,
+    .tabela-info td {
+        padding: 8px 6px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   GRID DA PÁGINA INICIAL — MOBILE FIRST
+======================================== */
+
+.pagina-inicial {
+    display: grid;
+
+    grid-template-areas:
+        "cabecalho"
+        "lateral"
+        "conteudo"
+        "rodape";
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    overflow-wrap: anywhere;
+}
+
+.pagina-inicial > .header {
+    grid-area: cabecalho;
+    min-width: 0;
+}
+
+.pagina-inicial > .lateral {
+    grid-area: lateral;
+    min-width: 0;
+}
+
+.pagina-inicial > main {
+    grid-area: conteudo;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+
+.pagina-inicial > .footer {
+    grid-area: rodape;
+    min-width: 0;
+}
+
+/* Lateral de categorias da home */
+
+.lateral {
+    padding: 18px 16px;
+    background-color: #e0f2e9;
+}
+
+.lateral h2 {
+    color: #176b55;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.lateral ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.lateral a {
+    display: block;
+    padding: 8px 12px;
+    color: #176b55;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.lateral a:hover,
+.lateral a:focus-visible {
+    background-color: #c8e6d5;
+    color: #0d4d3d;
+}
+
+/* Os eventos da página de detalhe se organizam conforme o espaço */
+
+.lista-eventos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+    min-width: 0;
+}
+
+/* Evita que tabelas e conteúdos longos alarguem a página toda */
+
+.secao-detalhe,
+.secao-detalhe table,
+.secao-detalhe td,
+.secao-detalhe th {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.tabela-info {
+    table-layout: fixed;
+}
+
+@media (max-width: 480px) {
+
+    .tabela-info th,
+    .tabela-info td {
+        padding: 8px 6px;
+        font-size: 0.88rem;
+    }
+
+    .cabecalho-principal {
+        overflow-wrap: anywhere;
+    }
+
+    .menu-navegacao ul {
+        gap: 4px;
+    }
+
+    .menu-navegacao a {
+        padding: 7px 8px;
+    }
+}
+
+/* Em telas maiores, a home ganha lateral à esquerda e conteúdo à direita */
+
+@media (min-width: 700px) {
+
+    .pagina-inicial {
+        grid-template-areas:
+            "cabecalho cabecalho"
+            "lateral conteudo"
+            "rodape rodape";
+
+        grid-template-columns: 190px minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .pagina-inicial > .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .pagina-inicial .logo {
+        text-align: left;
+    }
+
+    .pagina-inicial .menu {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    .pagina-inicial > .lateral {
+        padding: 24px 16px;
+    }
+
+    .pagina-inicial > .lateral ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-inicial > main {
+        padding: 30px 24px;
+    }
+}
+
+/* Em celulares muito estreitos, os cards usam uma única coluna */
+
+@media (max-width: 360px) {
+
+    .pagina-inicial > .lateral {
+        padding: 14px 10px;
+    }
+
+    .pagina-inicial > main {
+        padding: 16px 10px;
+    }
+
+    .pagina-inicial .cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
