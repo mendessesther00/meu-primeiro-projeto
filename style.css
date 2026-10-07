@@ -62,8 +62,8 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
-    padding: 22px 5%;
+    gap: 24px;
+    padding: 26px 5%;
     background-color: #176b55;
     color: white;
 }
@@ -91,7 +91,7 @@ a:focus-visible {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
 }
 
@@ -499,7 +499,7 @@ figcaption {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 24px;
+        gap: 40px;
     }
 
     .logo {
